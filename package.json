@@ -1,0 +1,16 @@
+{
+  "name": "kalendar-greg-na-jul",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "node lib/calendar.test.js"
+  },
+  "dependencies": {
+    "next": "14.2.35",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  }
+}
