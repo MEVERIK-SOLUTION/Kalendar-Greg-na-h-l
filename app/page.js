@@ -148,6 +148,11 @@ export default function Home() {
         <button className="today-btn" onClick={setToday} type="button">
           ↻ Dnes
         </button>
+        {!error && (
+          <div className="input-weekday">
+            {getDayOfWeek(numYear, numMonth, numDay)}
+          </div>
+        )}
         {error && <div className="error-message">{error}</div>}
       </div>
 
