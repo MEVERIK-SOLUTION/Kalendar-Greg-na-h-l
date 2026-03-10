@@ -1,12 +1,13 @@
 :root {
-  --bg: #0f172a;
-  --surface: #1e293b;
-  --border: #334155;
-  --text: #f1f5f9;
-  --text-muted: #94a3b8;
-  --primary: #3b82f6;
-  --primary-hover: #2563eb;
-  --accent: #10b981;
+  --bg: #FAFAF7;
+  --surface: #FFFFFF;
+  --border: #D0CFC9;
+  --text: #222222;
+  --text-muted: #777777;
+  --primary: #2C3F91;
+  --primary-hover: #1e2f6e;
+  --accent: #D4A83F;
+  --secondary: #7A2E2E;
   --error: #ef4444;
   --radius: 12px;
 }
@@ -47,7 +48,7 @@ body {
   font-size: 1.75rem;
   font-weight: 700;
   margin-bottom: 8px;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -64,6 +65,7 @@ body {
   border-radius: var(--radius);
   padding: 28px;
   margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(44, 63, 145, 0.06);
 }
 
 .card-title {
@@ -71,7 +73,7 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--text-muted);
+  color: var(--secondary);
   margin-bottom: 20px;
 }
 
@@ -143,8 +145,29 @@ body {
 }
 
 .result-card {
-  background: linear-gradient(135deg, #1e3a5f, #1e293b);
-  border: 1px solid var(--primary);
+  background: linear-gradient(135deg, #1e3360, #2C3F91);
+  border: 1px solid var(--accent);
+  color: #FAFAF7;
+}
+
+.result-card .card-title {
+  color: rgba(250, 250, 247, 0.75);
+}
+
+.result-card .result-weekday {
+  color: rgba(250, 250, 247, 0.75);
+}
+
+.result-card .result-date {
+  color: #FAFAF7;
+}
+
+.result-card .result-details {
+  border-top-color: rgba(250, 250, 247, 0.2);
+}
+
+.result-card .label {
+  color: rgba(250, 250, 247, 0.7);
 }
 
 .result-date {
@@ -195,10 +218,11 @@ body {
   font-size: 0.85rem;
   color: var(--text-muted);
   line-height: 1.7;
+  box-shadow: 0 2px 8px rgba(44, 63, 145, 0.06);
 }
 
 .info-card h3 {
-  color: var(--text);
+  color: var(--primary);
   font-size: 0.9rem;
   margin-bottom: 8px;
 }
@@ -213,8 +237,8 @@ body {
 
 .offset-badge {
   display: inline-block;
-  background: rgba(59, 130, 246, 0.15);
-  color: var(--primary);
+  background: rgba(212, 168, 63, 0.2);
+  color: var(--accent);
   padding: 4px 12px;
   border-radius: 20px;
   font-size: 0.85rem;
@@ -230,7 +254,7 @@ body {
 
 .input-weekday {
   text-align: center;
-  color: var(--accent);
+  color: var(--primary);
   font-size: 0.9rem;
   font-weight: 600;
   margin-top: 12px;
