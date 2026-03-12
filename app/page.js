@@ -54,8 +54,10 @@ function validateDate(year, month, day) {
   if (month < 1 || month > 12) return 'Měsíc musí být 1–12.';
   const max = daysInGregorianMonth(year, month);
   if (day < 1 || day > max) return `Den musí být 1–${max}.`;
-  if (year === 1582 && month === 10 && day >= 5 && day <= 14)
-    return 'Dny 5.–14. 10. 1582 neexistují (reforma kalendáře).';
+  // Excel formula: =KDYŽ(A((D2*10000+C2*100+B2>15821004);(D2*10000+C2*100+B2<15821015));"NEEXISTUJE!!!")
+  const numericDate = year * 10000 + month * 100 + day;
+  if (numericDate > 15821004 && numericDate < 15821015)
+    return 'NEEXISTUJE!!!';
   return null;
 }
 
